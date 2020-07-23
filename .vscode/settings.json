@@ -1,0 +1,14 @@
+{
+    "Lua.diagnostics.globals": [
+        "unpack",
+        "love"
+    ],
+    "Lua.diagnostics.disable": [
+        "empty-block",
+        "trailing-space",
+        "ambiguity-1",
+        "redundant-parameter",
+        "lowercase-global",
+        "unused-local"
+    ]
+}
