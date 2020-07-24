@@ -10,5 +10,6 @@
         "redundant-parameter",
         "lowercase-global",
         "unused-local"
-    ]
+    ],
+    "lua.targetVersion": "5.1"
 }

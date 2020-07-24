@@ -125,4 +125,24 @@ function uq.requireJson(path)
     return t
 end
 
+--- Splits a string apart by a separator into a table. If the separator is nil, separate the string into individual characters.
+---@param inputstr string - the string to split.
+---@param sep string      - the character(s) to separate `inputstr` by (MUST ESCAPE NON-LETTER CHARACTERS WITH A BACKSLASH).
+---@return table          - the string split into a table list.
+
+function uq.split(inputstr, sep)
+    assert(inputstr)
+    if sep == nil then
+        sep = "."
+    else
+        sep = "([^"..sep.."]+)"
+    end
+    local t={} ; local i=1
+    for str in inputstr:gmatch(sep) do
+        t[i] = str
+        i = i + 1
+    end
+    return t
+end
+
 return uq
